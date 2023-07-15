@@ -1,0 +1,183 @@
+html, body {
+  background: url(image2.png);
+  height: 100vh;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 100%;
+  background-attachment: fixed;
+  
+  
+}
+
+@font-face {
+	font-family: 'playfair';
+	src: url(PlayfairDisplay-Italic-VariableFont_wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'notoserif';
+	src: url(NotoSerifGeorgian-VariableFont_wdth\,wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+img{
+  width: 90px;
+text-align: center;
+}
+
+
+ul{
+	list-style: none;
+
+}
+
+
+a{
+  font-family: 'playfair';
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 20px 5px;
+  text-align: center;
+}
+
+img{
+  width: 70%;
+  padding: 5%;
+ align-items: baseline;
+  background-color: white;
+}
+
+a:hover{
+	background-color: rgb(100, 120, 100);
+	color: white;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+nav{
+    font-size: 20px;
+}
+#borrifa {
+  position: center;
+  margin-top:20px;
+  margin-left: 50px;
+}
+body, html {
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px auto;
+  text-color: #474350;
+}
+
+#wrapper {
+  width: 500px;
+  margin: 7px;
+  padding: 50px 50px;
+  height: auto; /* These two lines were the key. */
+  min-height: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+  padding: 0px auto;
+  
+  
+}
+
+h1 {
+font-family: 'notoserif';
+  width: 400px;
+  padding: 45px 45px;
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+  margin: auto;
+  background-color: rgb(100, 120, 100);
+  height: auto;
+  vertical-align: middle;
+  border-bottom: 2px solid  #e9f5c7;
+  border-radius: 3px;
+}
+
+.instructions {
+  margin: auto;
+  max-width: 300px;
+  padding: 20px 0 0 0;
+}
+
+.calc {
+  line-height: 2;
+  margin: auto;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid  #e9f5c7
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input {
+  line-height: 1;
+  width: 70px;
+}
+
+.calculate-btn {
+  font-size: 1.5em;
+  background-color: #bf4268;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  margin-top: .5em;
+  text-align:center;
+}
+
+.calculate-btn:hover {
+  background-color:  white;
+}
+
+#result {
+  margin: auto;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  border-top: 17px double rgb(100, 120, 100);
+}
+
+#result b {
+  color: #000;
+}
+/*.center-perfume-chart
+{
+  text-align:center;
+}*/
+.perfume-chart {
+  background:#FFFF;
+  padding: 0px 20px;
+  display:inline-block;
+  border-radius:5px;
+  text-align:left; 
+  
+  
+}
+

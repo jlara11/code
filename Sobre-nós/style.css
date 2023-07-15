@@ -1,0 +1,86 @@
+html, body {
+   background: url(image2.png);
+   height: 100vh;
+   background-repeat: no-repeat; 
+   background-size: cover; 
+   background-position: 100%; 
+  
+}
+
+@font-face {
+	font-family: 'playfair';
+	src: url(PlayfairDisplay-Italic-VariableFont_wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'notoserif';
+	src: url(NotoSerifGeorgian-VariableFont_wdth\,wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+	 /* fundo menu */ 
+nav{
+  font-size: 20px;
+}
+  
+
+
+ul{
+	list-style: none;
+
+}
+
+a{
+  font-family: 'playfair';
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 20px 5px;
+  text-align: center;
+}
+
+
+a:hover{
+	background-color: rgb(100, 120, 100);
+	color: white;
+}
+
+
+
+
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 { 
+  text-align: center;
+padding: 30px;
+  
+
+}
+
+p { 
+  text-align: center;
+  margin-right: 100px;
+  padding: 40px;
+  
+
+}
+
+.about {
+  position: center;
+  margin-top:70px;
+  margin-left: 500px;
+  
+}
+
+. logodata {
+  width:100px;
+  height: 100px ;
+    align-items: baseline;
+  background-color: white;
+}

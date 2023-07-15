@@ -1,0 +1,100 @@
+html, body {
+  background: url(image2.png);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 100%;
+  background-attachment: fixed;
+    
+}
+
+@font-face {
+	font-family: 'playfair';
+	src: url(PlayfairDisplay-Italic-VariableFont_wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'notoserif';
+	src: url(NotoSerifGeorgian-VariableFont_wdth\,wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul{
+	list-style: none;
+	
+}
+
+a{
+  font-family: 'playfair';
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 10px 30px;
+  text-align: center;
+
+}
+
+a:hover{
+	background-color: rgb(100, 120, 100);
+	color: white;
+}
+
+
+table {
+            font-family: Times New Roman;
+            border-collapse: collapse;
+            width: 10%;
+           cursor:pointer;
+  
+ 
+        }
+          
+      
+        th { text-align: center;
+            padding: 0px;
+            background: linear-gradient(360deg, transparent, #ffffff);
+            
+           
+        }
+          
+        h1 {
+            color: green;
+          padding: 35px;
+        }
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+tr:hover{
+	background-color: rgb(240, 239, 240);
+	color: #0d0c0c;
+
+  
+}
+td {
+ 
+  text-align: left; /* Left-align text */
+  padding: 1px; /* Add padding */
+  overflow: hidden;
+  background: linear-gradient(360deg, transparent, #ffffff);
+}
+tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #a8a4a4;
+  padding: 1px;
+  background: linear-gradient(360deg, transparent, #ffffff);
+}
+.test { 
+  width: 57px;
+	height: 57px;
+ position: center;
+}
+nav{ background: url();
+    font-size: 20px;
+  }
+    
+  

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" /> 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  </head>
+
+<body>
+  <nav class="navbar bg-scroll fixed-top">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+         <img class="logodata" src="../logomini.png" alt="">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>        
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Search/Login.Cadastro/index.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Sobre-nós/index.html">Sobre</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Serviços
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../QuestionárioConsumidor/index.html">Questionário de Perfume</a></li>
+              <li><a class="dropdown-item" href="../PerfumeCalc/index.html"> Descubra a duração de seu perfume</a></li>
+              <li><a class="dropdown-item" href="../Search/index.html">Pesquise seu Perfume</a></li>
+            </ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../FaleConosco/index.html">Fale conosco</a>
+          </li>
+        </ul>
+        </form>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+    <div class="quiz-container">
+        <div class="title"><p>Faça nosso teste e</p>
+        <p>Descubra sua preferência olfativa! </p></div>
+        <div id="question" class="question"></div>
+        <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="3" />
+            <span class="option3"></span>
+        </label>
+        <!-- Buttons -->
+        <div class="controls">
+            <button class="previous">Voltar</button>
+            <button class="next">Avançar</button>
+        </div>
+    </div>
+
+    <div class="result">
+
+    </div>
+  <script>
+    // QUESTIONS
+
+const questions = [
+  {
+     "question": "Qual sua idade?",
+    "answer1": "abaixo de 18 anos de idade",
+    "answer1Total": "1",
+    "answer2": " Entre 18 e 30 anos de idade ",
+    "answer2Total": "2",
+    "answer3": "Acima de 30 anos de idade",
+    "answer3Total": "3"
+  },
+  {
+    "question": "Eu sou extrovertido(a)",
+    "answer1": "Concordo",
+    "answer1Total": "1",
+    "answer2": "Neutro",
+    "answer2Total": "2",
+    "answer3": "Discordo",
+    "answer3Total": "3"
+  },
+  {
+   "question":
+      "Selecione sua escala de prioridades pela ordem apresentada: ",
+    "answer1": "Amor, Carreira, Dinheiro",
+    "answer1Total": "1",
+    "answer2": "Dinheiro, Carreira, Amor",
+    "answer2Total": "3",
+    "answer3": "Carreira, Dinheiro, Amor",
+    "answer3Total": "2"
+  },
+  {
+    "question": "Até quanto está disposto(a) a pagar por um perfume?",
+    "answer1": "Até 120 reais.",
+    "answer1Total": "3",
+    "answer2": "Até 200 reais.",
+    "answer2Total": "2",
+    "answer3":
+      "Acima de 200 reais.",
+    "answer3Total": "1"
+  },
+  {
+     "question": "Qual é sua preferência de família olfativa?",
+    "answer1": "Cítrico/Frutal",
+    "answer1Total": "1",
+    "answer2": "Fresco/Aquático.",
+    "answer2Total": "2",
+    "answer3": "Floral e/ou Herbal.",
+    "answer3Total": "3"
+  },
+  {
+     "question":
+      "Qual sua marca nacional favorita?",
+    "answer1":
+      "O boticário",
+    "answer1Total": "3",
+    "answer2": "Jequiti",
+    "answer2Total": "2",
+    "answer3": "Avon",
+    "answer3Total": "1"
+  },
+  {
+    "question": "Escolha sua preferência de intensidade em um perfume",
+    "answer1": "Intenso",
+    "answer1Total": "1",
+    "answer2": " Sútil",
+    "answer2Total": "2",
+    "answer3": "Moderado",
+    "answer3Total": "3"
+  }
+]
+
+
+let currentQuestion = 0;
+let score = [];
+let selectedAnswersData = [];
+const totalQuestions =questions.length;
+
+const container = document.querySelector('.quiz-container');
+const questionEl = document.querySelector('.question');
+const option1 = document.querySelector('.option1');
+const option2 = document.querySelector('.option2');
+const option3 = document.querySelector('.option3');
+const nextButton = document.querySelector('.next');
+const previousButton = document.querySelector('.previous');
+const restartButton = document.querySelector('.restart');
+const result = document.querySelector('.result');
+
+//Function to generate question 
+function generateQuestions (index) {
+    //Select each question by passing it a particular index
+    const question = questions[index];
+    const option1Total = questions[index].answer1Total;
+    const option2Total = questions[index].answer2Total;
+    const option3Total = questions[index].answer3Total;
+    //Populate html elements 
+    questionEl.innerHTML = `${index + 1}. ${question.question}`
+    option1.setAttribute('data-total', `${option1Total}`);
+    option2.setAttribute('data-total', `${option2Total}`);
+    option3.setAttribute('data-total', `${option3Total}`);
+    option1.innerHTML = `${question.answer1}`
+    option2.innerHTML = `${question.answer2}`
+    option3.innerHTML = `${question.answer3}`
+}
+
+
+function loadNextQuestion () {
+    const selectedOption = document.querySelector('input[type="radio"]:checked');
+    //Check if there is a radio input checked
+    if(!selectedOption) {
+        alert('Please select your answer!');
+        return;
+    }
+    //Get value of selected radio
+    const answerScore = Number(selectedOption.nextElementSibling.getAttribute('data-total'));
+
+    ////Add the answer score to the score array
+    score.push(answerScore);
+
+    selectedAnswersData.push()
+    
+
+    const totalScore = score.reduce((total, currentNum) => total + currentNum);
+
+    //Finally we incement the current question number ( to be used as the index for each array)
+    currentQuestion++;
+
+        //once finished clear checked
+        selectedOption.checked = false;
+    //If quiz is on the final question
+    if(currentQuestion == totalQuestions - 1) {
+        nextButton.textContent = 'Resultado';
+    }
+    //If the quiz is finished then we hide the questions container and show the results 
+    if(currentQuestion == totalQuestions) {
+        container.style.display = 'none';
+        result.innerHTML =
+         `<h1 class="final-score">Seu resultado: ${totalScore}</h1>
+         <div class="summary">
+            <h1>Resultado</h1>
+            <p>Com base nos seus resultados, o tipo de perfume que mais combina com você é:</p>
+            <p>Entre 15 e 21: Amadeirada</p>
+            <p>Entre 10 e 15: Oriental</p>
+            <p>Entre 5 e 10: Floral</p>
+            <p>5 ou abaixo disso:  Citríca</p>
+        </div>
+        <button class="restart"> Refazer teste</button>
+         `;
+        return;
+    }
+    generateQuestions(currentQuestion);
+}
+
+//Function to load previous question
+function loadPreviousQuestion() {
+    //Decrement quentions index
+    currentQuestion--;
+    //remove last array value;
+    score.pop();
+    //Generate the question
+    generateQuestions(currentQuestion);
+}
+
+//Fuction to reset and restart the quiz;
+function restartQuiz(e) {
+    if(e.target.matches('button')) {
+    //reset array index and score
+    currentQuestion = 0;
+    score = [];
+    //Reload quiz to the start
+    location.reload();
+    }
+
+}
+
+
+generateQuestions(currentQuestion);
+nextButton.addEventListener('click', loadNextQuestion);
+previousButton.addEventListener('click',loadPreviousQuestion);
+result.addEventListener('click',restartQuiz);
+  </script>
+</body>
+
+</html>

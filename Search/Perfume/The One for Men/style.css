@@ -1,0 +1,189 @@
+html, body {
+   background: url(image2.png);
+    height: 100vh;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 100%;
+  background-attachment: fixed;
+  
+}
+
+@font-face {
+	font-family: 'playfair';
+	src: url(PlayfairDisplay-Italic-VariableFont_wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'notoserif';
+	src: url(NotoSerifGeorgian-VariableFont_wdth\,wght.ttf) format(truetype);
+	font-weight: normal;
+	font-style: normal;
+}
+
+a{
+  font-family: 'playfair';
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 20px 5px;
+  text-align: center;
+}
+body {
+  
+}
+h1 {
+  padding: 50px;
+}
+.container {
+  max-width: 1200px;
+  margin: 50px;
+  padding: 15px;
+  display: flex;
+}
+/* Columns */
+
+.left-column {
+
+  width: 65%;
+
+  position: relative;
+
+}
+
+ 
+
+.right-column {
+
+  width: 35%;
+
+  margin-top: 60px;
+
+}
+
+/* Columns */
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+/* Left Column */
+
+.left-column img {
+
+  width: 100%;
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  opacity: 0;
+
+  transition: all 0.3s ease;
+
+}
+
+ 
+
+.left-column img.active {
+
+  opacity: 1;
+
+}
+
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid rgb(73, 105, 84);
+  margin-bottom: 50px;
+  margin: 50px;
+}
+.product-description span {
+  font-size: 12px;
+  color:  rgb(73, 105, 84);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: rgb(73, 105, 84);
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+
+
+
+.212  {
+    width: 150px;
+	height: 150px;
+  }
+/* Responsive */
+
+@media (max-width: 940px) {
+
+  .container {
+
+    flex-direction: column;
+
+    margin-top: 60px;
+
+  }
+
+ 
+
+  .left-column,
+
+  .right-column {
+
+    width: 100%;
+
+  }
+
+ 
+
+  .left-column img {
+
+    width: 300px;
+
+    right: 0;
+
+    top: -65px;
+
+    left: initial;
+
+  }
+
+}
+
+ 
+
+@media (max-width: 535px) {
+
+  .left-column img {
+
+    width: 220px;
+
+    top: -85px;
+
+  }
+
+}
+
+nav{
+    font-size: 20px;
+}
+ 

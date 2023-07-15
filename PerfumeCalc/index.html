@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DataSW</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="1script.js"></script>
+</head>
+
+<body>
+  
+  <nav class="navbar bg-scroll fixed-top">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <img class="logodata" src="../logomini.png" alt="">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Search/Login.Cadastro/index.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Sobre-nós/index.html">Sobre</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Serviços
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../QuestionárioConsumidor/index.html">Questionário de Perfume</a></li>
+              <li><a class="dropdown-item" href="">Descubra a duração de seu perfume</a></li>
+              <li><a class="dropdown-item" href="../Search/index.html">Pesquisa de Perfume</a></li>
+            </ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../FaleConosco/index.html">Fale conosco</a>
+          </li>
+        </ul>
+        </form>
+      </div>
+    </div>
+    </div>
+  </nav>
+ 
+  <div id="wrapper">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <h1> Descubra qual a duração<br>de seu perfume!</h1>
+    <div class="instructions">
+      <p>Calcule quantos dias você levará para terminar um frasco de perfume.<br></p>
+    </div>
+    <img src="https://i.gifer.com/7DCW.gif" id="borrifa">
+    <p>
+    <div class="center-perfume-chart">
+      <div class="perfume-chart"><b>Medidas</b>
+        <br>0.5 oz = 15ml
+        <br>1 oz = 30ml
+        <br>1.7 oz = 50ml
+        <br>3.4 oz = 100ml
+      </div>
+    </div>
+
+    </p>
+    <!--Include typical perfume bottle sizes-->
+    <!--GREETING /*Fade in, use JS to create a greeting based on time of day
+
+What size is your bottle? --- Dropdown menu (var bottleSize)
+  
+How many sprays do you wear per day? -- Fill in (var spraysPerDay)
+
+
+Result:
+It will take you (var daysToFinish) days to finish your SIZE bottle of perfume.
+
+Calculate another?
+
+
+VARIABLES
+spraysPerOz
+-->
+    </p>    
+    <div class="calc">
+      <p>
+        Insira quantos ml seu perfume possui: <input class="input-lg" title="Size of perfume" size="1" type="text"
+          id="bottleSize" />
+        <br>
+        Quantos borrifadas você utiliza por dia?: <input class="input-lg" Title="How many sprays per day" size="1"
+          type="text" id="spraysPerDay" />
+      </p>
+      <div class="text-center">
+        <button class="btn btn-primary calculate-btn" onclick="calculatePerfume();">Calcular</button>
+        </b>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div id="result"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
